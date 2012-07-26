@@ -3484,6 +3484,11 @@ a:hover {
   border: 1px solid #696983;
 }
 
+/* Set minimum width for the navbar */
+.container-fluid > .row-fluid > div:first-child {
+  min-width: 70px;
+}
+
 /* This makes the image attribution float only when the 
    screen width > 767px */
 @media (min-width: 767px) {
