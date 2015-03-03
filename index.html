@@ -104,7 +104,7 @@
         $('.nav-stacked a.active').removeClass('active');
         
         // Find e, the sidebar link which links to the 'section'
-        if (e === undefined) {
+        if (typeof e === 'undefined') {
           $('.nav-stacked a').each(function(){
             if ($(this).attr('href') == '#' + section) {
               e = $(this);
@@ -114,7 +114,7 @@
         
         $(e).addClass('active');
         
-        if (w.pageCache[section] !== undefined) {
+        if (typeof w.pageCache[section] !== 'undefined') {
           $('#main-content').html(w.pageCache[section]);
         }
         else {
