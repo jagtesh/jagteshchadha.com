@@ -6,148 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Technology Consultant with over a decade of experience.">
     <meta name="author" content="Jagtesh Chadha">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200" rel="stylesheet">
+    <style>
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
 
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu">
+    .logo {
+      font-family: "Raleway", sans-serif;
+      font-weight: 200;
+      font-size: 300px;
+      letter-spacing: -30px;
+    }
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://current.bootstrapcdn.com/js/html5.js"></script>
-    <![endif]-->
-
+    .email {
+      font-family: sans-serif;
+      color: #ccc;
+      letter-spacing: 10px;
+      font-size: 15px;
+      text-decoration: none;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    </style>
   </head>
 
   <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-		      
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="http://github.com/jagtesh">GitHub</a></li>
-              <li class="divider-vertical">§</li>
-              <li><a href="http://facebook.com/jagtesh">Facebook</a></li>
-              <li><a href="http://twitter.com/jagtesh">Twitter</a></li>
-              <li><a href="http://linkedin.com/in/jagtesh">LinkedIn</a></li>
-              <li class="divider-vertical">§</li>
-              <li><a href="mailto:contact@jagteshchadha.com">Email</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
+    <div class="wrapper">
+      <a href="mailto:jagtesh@gmail.com" class="email">
+        <div class="logo">JC</div>
+      </a>
     </div>
 
-    <div class="container-fluid">
-
-      <div class="row-fluid">
-        <div class="span1">
-          <ul class="nav nav-pills nav-stacked">
-            <li><a href="#home" class="active">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#resume">resume</a></li>
-          </ul>
-        </div>
-        <div class="span7" id="main-content">
-          <p>Loading..</p>
-          <!--Body content-->
-        </div>
-      </div>
-      <br/>
-      
-      <div class="row-fluid">
-        <div style="text-align:right;">
-          <a style="background: #505064;padding: 3px 5px;" href="http://www.flickr.com/photos/commensa/52302422/">Photo: Sunrise on Cow Bay by Alistair</a>
-        </div>
-      </div>
-
-    </div> <!-- /container -->
-
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script src="http://current.bootstrapcdn.com/bootstrap-v204/js/bootstrap.js"></script>
-
-    <script>
-    // It's a small piece of code, and this is a single page
-    // app. So keeping the JS glue here.
-    (function(w){
-      // Cache all pages here
-      w.pageCache = {};
-      
-      // Bind openSection() to left-sidebar links
-      // in order to load the section content on click
-      $('.nav-stacked a').each(function(){
-        $(this).click(function(){
-          var section = $(this).attr('href').replace('#', '');
-          var path = '/section/_' + section + '.html';
-          
-          openSection(section, this);
-        })
-      });
-      
-      w.openSection = function(section, e) {
-        // make currently clicked link active
-        $('.nav-stacked a.active').removeClass('active');
-        
-        // Find e, the sidebar link which links to the 'section'
-        if (typeof e === 'undefined') {
-          $('.nav-stacked a').each(function(){
-            if ($(this).attr('href') == '#' + section) {
-              e = $(this);
-            }
-          });
-        }
-        
-        $(e).addClass('active');
-        
-        if (typeof w.pageCache[section] !== 'undefined') {
-          $('#main-content').html(w.pageCache[section]);
-        }
-        else {
-          $.ajax({
-            url: '/section/_' + section + '.html',
-            cache: false
-          }).done(function(html){
-            $('#main-content').html(html);
-            w.pageCache[section] = html;
-          });
-        }
-      };
-      
-      // Load home section as soon as DOM is ready
-      $(document).ready(function(){
-        /*
-        $.ajax({
-          url: '/section/_home.html',
-          cache: false
-        }).done(function(html){
-          $('#main-content').html(html);
-        });*/
-        openSection('home');
-      });
-      
-    })(window);
-    </script>
     <!-- Tracking code for Google Analytics -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-269343-7']);
       _gaq.push(['_trackPageview']);
 
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-	</script>
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
- 
